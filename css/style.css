@@ -62,10 +62,13 @@ ul {
   margin: 0;
 }
 
+.link{
+  text-decoration: none; 
+  color: inherit;
+}
+
 .header-section {
   background-color: var(--bg-header-color);
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -127,13 +130,12 @@ ul {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding: 24px 0 25px 0 ;
+  display: block;
 }
 
 .header-list_link_current {
   color: var(--hover-color);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
 .header-list_link:hover,
@@ -145,8 +147,12 @@ ul {
   color: var(--phone-color);
   font-weight: 500;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
+
+
+
 .header-contacts_link:hover,
 .header-contacts_link:focus {
   color: var(--hover-color);
@@ -201,20 +207,15 @@ ul {
   margin: 0 auto;
 }
 
-.section-title {
+.benefits-title {
   color: var(--text-color-black);
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.section-details {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: var(--bg-header-color);
-}
 
-.section-icon_details {
+.benefits-icon_details {
   width: 270px;
   height: 120px;
   background-color: var(--bg-section-team);
@@ -225,18 +226,18 @@ ul {
   margin-bottom: 30px;
 }
 
-.section-list {
+.benefits {
   display: flex;
   justify-content: center;
   padding-left: 245px;
   padding-right: 215px;
 }
 
-.section-list_item {
+.benefits-item:not(:last-child){
   margin-right: 30px;
 }
 
-.section-body {
+.benefits-description {
   color: var(--phone-color);
   line-height: 24px;
   font-weight: 400;
@@ -245,18 +246,12 @@ ul {
 }
 
 .section-photo {
-  background-color: var(--bg-header-color);
+ padding-top: 0;
 }
 
 .section-photo_list {
   display: flex;
   justify-content: center;
-}
-
-.photo-container {
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 94px;
 }
 
 .photo-list_item:not(:last-child) {
@@ -280,7 +275,6 @@ ul {
 
 .section-team {
   background-color: #f5f4fa;
-  padding-top: 94px;
 }
 
 .section-team_list {
@@ -291,9 +285,7 @@ ul {
 .team-social-media {
   display: flex;
   justify-content: center;
-  padding-left: 44px;
-  padding-right: 44px;
-  padding-bottom: 42px;
+
 }
 
 .team-list-link {
@@ -322,15 +314,17 @@ ul {
 
 .team-list_item {
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 94px;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
+  padding-bottom: 30px;
 }
 
 .team-list_item:not(:last-child) {
   margin-right: 30px;
+}
+
+.team-list-icons:not(:last-child){
+  margin-right: 10px;
 }
 
 .member-image {
@@ -355,7 +349,7 @@ ul {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
 }
 
 .customer-section {
@@ -371,6 +365,7 @@ ul {
 .customers-title {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 36px;
 }
 
 .customers-container {
@@ -390,13 +385,13 @@ ul {
 .customer-list-icons {
   
   width: 170px;
-  height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
   color: #afb1b8;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
 }
 
 .customer-list-icons:hover,
@@ -437,10 +432,12 @@ fill: currentColor;
 }
 
 .icon-footer-link {
-  fill: var(--text-color-white);
+  color: var(--text-color-white);
   width: 44px;
   display: flex;
-  padding:12px
+  padding:12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
 }
 
 .icon-footer-link:not(:last-child) {
@@ -449,13 +446,18 @@ fill: currentColor;
 
 .icon-footer-link:hover,
 .icon-footer-link:focus {
-  fill: var(--text-color-white);
+  color: var(--text-color-white);
   background-color: #2196f3;
-  border-radius: 50%;
 }
 
 
+.icon-footer{
+  fill:currentColor
+}
 
+.icon-footer-item:not(:last-child){
+  margin-right: 10px;
+}
 
 .footer-link {
   color: var(--hover-color);
