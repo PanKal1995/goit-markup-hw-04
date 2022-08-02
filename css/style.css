@@ -168,7 +168,7 @@ ul {
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/Img\\(17\)\\(1\).jpg);
+  url(/images/Img\ \(17\)\ \(1\).jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
